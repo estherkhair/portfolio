@@ -1,0 +1,107 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffe0fe;
+        color: #000000;
+    }
+    
+    header {
+        background-color: #41004b;
+        color: #fff;
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0 15px;
+    }
+    
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    main {
+        padding: 20px;
+    }
+
+    main p {
+        padding: 10px;
+        border: 10px;
+        border-style: ridge;
+        border-color: #ed77ff;
+        max-width: 60%;
+        background-color: #fad6ff;
+    }
+    
+    #introduction {
+        text-align: center;
+    }
+    
+    #introduction img {
+        width: 150px;
+        border-radius: 50%;
+    }
+    
+    .skill-chart {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .skill {
+        margin: 10px 0;
+    }
+    
+    .skill-bar {
+        height: 20px;
+        background-color: #9900b0;
+    }
+    
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        /* margin: 20px auto; */
+        border: 10px solid  #fad6ff;
+    }
+    
+    #contact-form label {
+        margin-top: 10px;
+    }
+    
+    #contact-form input, #contact-form textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid  #fad6ff;
+    }
+    
+    #contact-form button {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #ea4aff;
+        color: #000000;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+    }
+    
+    #social-media a {
+        display: inline-block;
+        margin: 10px;
+        color: #3498db;
+        text-decoration: none;
+    }
+    

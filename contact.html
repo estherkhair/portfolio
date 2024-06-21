@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <style> 
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h1> Contact</h1>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+                <p> Phone Number: (857)-320-5693 <br>
+                        Email: esther.khair@tufts.edu</p>
+            </form>
+            <!-- <div id="map"></div> -->
+            <div id="social-media">
+                <a href="https://twitter.com/yourusername">Twitter</a>
+                <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+                <a href="https://github.com/yourusername">GitHub</a>
+            </div>
+        </section>
+    </main>
+    <script src="js/darkmode.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+</body>
+</html>

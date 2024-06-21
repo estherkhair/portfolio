@@ -1,0 +1,17 @@
+body.dark-mode {
+        background-color: #333;
+        color: #f0f0f0;
+    }
+    
+    header.dark-mode {
+        background-color: #000;
+    }
+    
+    nav ul li a.dark-mode {
+        color: #ccc;
+    }
+    
+    #contact-form button.dark-mode {
+        background-color: #555;
+    }
+    
