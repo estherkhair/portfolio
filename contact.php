@@ -24,7 +24,35 @@
     <main>
         <section id="contact">
             <h1> Contact</h1>
-            <form id="contact-form">
+            <?php
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                // Get form data
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $message = $_POST['message'];
+
+                // Validate email
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "<p>Invalid email format</p>";
+                } else {
+                    // Email details
+                    $to = "your-email@example.com";
+                    $subject = "Contact Form Submission from $name";
+                    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+                    // Email headers
+                    $headers = "From: $email";
+
+                    // Send email
+                    if (mail($to, $subject, $body, $headers)) {
+                        echo "<p>Email successfully sent!</p>";
+                    } else {
+                        echo "<p>Failed to send email.</p>";
+                    }
+                }
+            }
+            ?>
+            <form id="contact-form" method="POST" action="contact.php">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -35,31 +63,11 @@
                 <textarea id="message" name="message" required></textarea>
                 
                 <button type="submit">Send</button>
-                <p> Phone Number: (857)-320-5693 <br>
-                        Email: esther.khair@tufts.edu</p>
             </form>
-            <!-- <div id="map"></div> -->
-            <div id="social-media">
-                <a href="https://twitter.com/yourusername">Twitter</a>
-                <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
-                <a href="https://github.com/estherkhair">GitHub</a>
-            </div>
         </section>
     </main>
     <script src="js/darkmode.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    <script>
-        function initMap() {
-            var location = {lat: -25.363, lng: 131.044};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: location
-            });
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-    </script>
 </body>
 </html>
+
+
